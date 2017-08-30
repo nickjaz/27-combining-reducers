@@ -5,7 +5,9 @@
   "main": "webpack.config.js",
   "scripts": {
     "build": "webpack",
-    "watch": "webpack-dev-server"
+    "watch": "webpack-dev-server",
+    "test": "jest --coverage",
+    "test-watch": "jest --watchAll"
   },
   "repository": {
     "type": "git",
