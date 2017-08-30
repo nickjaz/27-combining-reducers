@@ -7,14 +7,15 @@ class ExpenseForm extends React.Component {
     this.state = {
       name: props.expense ? props.expense.name : '',
       categoryID: props.expense ? props.expense.categoryID : this.props.category.id,
-      price: props.expense ? props.expense.price : 0
+      price: props.expense ? props.expense.price : 0,
+      id: props.expense ? props.expense.id : null
     }
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  componentWillRecieveProps(props) {
+  componentWillReceiveProps(props) {
     if(props.expense) {
       this.setState(props.expense);
     }
